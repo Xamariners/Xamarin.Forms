@@ -53,7 +53,7 @@ namespace Xamarin.Forms.Internals
 			public bool UseDesignProperties { get; set; }
 		}
 
-		private static Action<Exception> exceptionHandler1;
+		static Action<Exception> exceptionHandler1;
 
 		[Obsolete("2 is better than 1")]
 		internal static Action<Exception> ExceptionHandler {
