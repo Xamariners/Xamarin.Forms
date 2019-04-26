@@ -15,6 +15,7 @@ namespace Xamarin.Forms
 		public int Count => Inner.Count;
 		public bool IsReadOnly => ((IList<ShellItem>)Inner).IsReadOnly;
 		internal IList<ShellItem> Inner { get; set; }
+		internal Shell Parent { get; set; }
 
 		public ShellItem this[int index]
 		{
@@ -22,7 +23,24 @@ namespace Xamarin.Forms
 			set => Inner[index] = value;
 		}
 
-		public void Add(ShellItem item) => Inner.Add(item);
+		public void Add(ShellItem item)
+		{
+			if(Routing.IsImplicit(item) && 
+				item.Items.Count == 1 &&
+				item.Items[0] is Tab)
+			{
+				foreach(var existingItems in this)
+				{
+					if(Routing.IsImplicit(existingItems))
+					{
+						existingItems.Items.Add(item.Items[0]);
+						return;
+					}
+				}
+			}
+
+			Inner.Add(item);
+		}
 
 		public void Clear() => Inner.Clear();
 

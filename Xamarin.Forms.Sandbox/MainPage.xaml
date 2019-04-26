@@ -1,12 +1,64 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+<?xml version="1.0" encoding="utf-8" ?>
+<Shell xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Xamarin.Forms.Sandbox.MainPage"
              xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
-             ios:Page.UseSafeArea="true">
-    <ContentPage.Content>
+            
+            >
+
+        <Tab Title="Home" Icon="home.png">
+            <ShellContent>
+                <ContentPage></ContentPage>
+            </ShellContent>
+        </Tab>
+        <Tab Title="Library" Icon="library.png">
+            <ShellContent>
+                <ContentPage></ContentPage>
+            </ShellContent>
+        </Tab>
+        <Tab Title="Contact" Icon="contact.png">
+            <ShellContent>
+            <ContentPage></ContentPage>
+        </ShellContent>
+        </Tab>
+
+
+    <!--<Shell.FlyoutHeader>
+        <Grid HeightRequest="200" BackgroundColor="White" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Label Text="whatever3"></Label>
+            <Label Text="bottom" Grid.Row="1"></Label>
+        </Grid>
+    </Shell.FlyoutHeader>
+    
+    <ContentPage Title="TOP">
+        <ScrollView>
         <StackLayout>
-            <Button Text="I am a Button"  />
-        </StackLayout>
-    </ContentPage.Content>
-</ContentPage>
+            <Label Text="main content"></Label>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage>
+    <ContentPage Title="1234"></ContentPage>
+    <ContentPage Title="1234"></ContentPage>
+    <ContentPage Title="1234"></ContentPage>
+    <ContentPage Title="1234"></ContentPage>
+    <ContentPage Title="1234"></ContentPage>
+    <ContentPage Title="1234"></ContentPage>
+    <ContentPage Title="1234"></ContentPage>
+    <ContentPage Title="1234"></ContentPage>
+    <ContentPage Title="1234"></ContentPage>
+    <ContentPage Title="1234"></ContentPage>
+    <ContentPage Title="1234"></ContentPage>
+    <ContentPage Title="1234"></ContentPage>
+    <ContentPage Title="1234"></ContentPage>
+    <ContentPage Title="1234"></ContentPage>
+    <ContentPage Title="1234"></ContentPage>
+    <ContentPage Title="1234"></ContentPage>
+    <ContentPage Title="1234"></ContentPage>
+    <ContentPage Title="1234"></ContentPage>
+    <ContentPage Title="1234"></ContentPage>
+    <ContentPage Title="BOTTOM"></ContentPage>-->
+</Shell>
