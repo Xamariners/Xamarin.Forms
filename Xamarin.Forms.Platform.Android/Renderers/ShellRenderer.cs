@@ -36,7 +36,10 @@ namespace Xamarin.Forms.Platform.Android
 		VisualElementTracker IVisualElementRenderer.Tracker => null;
 
 		AView IVisualElementRenderer.View => _flyoutRenderer.AndroidView;
-		ViewGroup IVisualElementRenderer.ViewGroup => _flyoutRenderer.AndroidView as ViewGroup;
+
+		// Used by Previewer
+		[EditorBrowsable(EditorBrowsableState.Never)]
+		public ViewGroup ViewGroup => _flyoutRenderer.AndroidView as ViewGroup;
 
 		SizeRequest IVisualElementRenderer.GetDesiredSize(int widthConstraint, int heightConstraint)
 		{
@@ -59,7 +62,9 @@ namespace Xamarin.Forms.Platform.Android
 		{
 		}
 
-		void IVisualElementRenderer.UpdateLayout()
+		// Used by Previewer
+		[EditorBrowsable(EditorBrowsableState.Never)]
+		public void UpdateLayout()
 		{
 			var width = (int)AndroidContext.ToPixels(Element.Width);
 			var height = (int)AndroidContext.ToPixels(Element.Height);
