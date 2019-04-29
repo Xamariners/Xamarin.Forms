@@ -95,6 +95,7 @@
     <Compile Include="CollectionView\StartSnapHelper.cs" />
     <Compile Include="CollectionView\TemplatedItemViewHolder.cs" />
     <Compile Include="CollectionView\TextViewHolder.cs" />
+    <Compile Include="DesignerActivity.cs" />
     <Compile Include="Elevation.cs" />
     <Compile Include="Extensions\EntryRendererExtensions.cs" />
     <Compile Include="Extensions\FragmentManagerExtensions.cs" />
